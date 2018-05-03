@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Microsoft YaHei';
+}
+h1{
+	padding: 30px 0;
+	text-align: center;
+	font-weight: normal;
+	font-size: 25px;
+}
+.main{
+	width: 1200px;
+	height: 460px;
+	border: 10px solid #bbb;
+	margin: 10px auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner{
+	width: 1200px;
+	height: 460px;
+	position: relative;
+}
+.banner-slide{
+	width: 1200px;
+	height: 460px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.slide1{
+	background: url('../img/1.jpg') no-repeat;
+}
+.slide2{
+	background: url('../img/2.jpg') no-repeat;
+}
+.slide3{
+	background: url('../img/3.jpg') no-repeat;
+}
+.slide4{
+	background: url('../img/4.jpg') no-repeat;
+}
+.slide5{
+	background: url('../img/5.jpg') no-repeat;
+}
+.slide-active{
+	display: block;
+}
+
+/*上一页下一页按钮*/
+.button{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	top: 50%;
+	margin-top: -40px;
+	background: url('../img/pre2.png') no-repeat center center;
+}
+.button:hover{
+	/* 注意设置 background: #333; 背景颜色会覆盖背景图片，需要改成background-color：#333;*/
+	background-color: #333;
+	opacity: 0.8;
+	/* 为了兼容别的浏览器，要添加 filter */
+	filter: alpha(opacity=80);
+}
+.next{
+	/*下一页按钮 箭头旋转180度*/
+	transform: rotate(180deg); 
+	/* 设置按钮位置 */
+	left: auto;
+	right: 0;
+}
+
+/* 原点导航*/
+.dots{
+	position: absolute;
+	right: 20px;
+	bottom: 24px;
+	text-align: right;	
+}
+
+.dots span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 50%;
+	background: rgba(7,17,27,0.4);
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;
+	margin-left: 8px;
+	cursor: pointer;
+}
+.dots .active{
+	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+	background: #fff;
+}

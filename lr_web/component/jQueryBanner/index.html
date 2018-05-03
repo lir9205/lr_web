@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery 实现轮效果</title>
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+</head>
+<body>
+<h1>jQuery实现轮播图</h1>
+<div class="main">
+	<!-- 图片轮播 -->
+	<div class="banner" id="banner">
+		<div class="banner-slide slide1 slide-active"><a href=""></a></div>
+		<div class="banner-slide slide2 "><a href=""></a></div>
+		<div class="banner-slide slide3 "><a href=""></a></div>
+		<div class="banner-slide slide4 "><a href=""></a></div>
+		<div class="banner-slide slide5 "><a href=""></a></div>
+	</div>
+	<!-- 上一张、下一张按钮 -->
+	<!-- href="javascript:void(0)" 表示这个超链接是不做任何跳转的。 -->
+	<a href="javascript:void(0)" class="button prev"></a>
+	<a href="javascript:void(0)" class="button next"></a>
+	<!-- 原点导航 -->
+	<div class="dots">
+		<span class="active"></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script src="js/slick.js"></script>
+</body>
+</html>

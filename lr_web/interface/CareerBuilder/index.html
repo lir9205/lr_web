@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>作业：网页布局HTML+CSS</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="header">
+		<div class="logo"><img src="images/logo.png" /></div>
+		<div class="nav">
+			<ul>
+				<li><p class="nav-item">HOME</p></li>
+				<li><p class="nav-item">ABOUT</p></li>
+				<li><p class="nav-item">GALLERY</p></li>
+				<li><p class="nav-item">FACULT</p></li>
+				<li><p class="nav-item">EVENTS</p></li>
+				<li><p class="nav-item">CONTACT</p></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 主体 -->
+	<div class="container">
+		<!-- banner图 -->
+		<div class="banner">
+			<img src="images/banner3.jpg" />
+		</div>
+		<!-- 遮罩层 -->
+		<div class="banner-layer"></div>
+		<!-- banner图上的表单信息 -->
+		<div class="banner-form">
+			<form>
+				<div class="commen"><input type="text" name="name" placeholder="your Name" /></div>
+				<div class="commen"><input type="text" name="phone" placeholder="your Phone" /></div>
+				<div class="commen"><input type="text" name="email" placeholder="your Email" /></div>
+				<div class="commen textarea-input">
+					<!-- <input type="textarea" name="comment" placeholder="Write Your Comment Here" /> -->
+					<textarea placeholder="Write Your Comment Here"></textarea>
+				</div>
+				<div class="commen sendbtn-input"><input type="submit" name="submit" value="SEND MESSAGE" /></div>
+			</form>			
+		</div>
+		<!-- ABOUT区 -->
+		<div class="about">
+			<!-- About 顶部（标题和文字） -->
+			<div class="about-top">				
+				<div class="title">ABOUT</div>
+				<hr width="40px" hight="2px" color="#07cbc9" />
+				<div class="word">
+					Lorem Ipsum is simply dummy text of the printing and typesetting<br/> 
+					industry. Lorem Ipsum has been the industry's standard dummy<br/> 
+					text ever since the 1500s.
+				</div>
+			</div>
+			<!-- About 中间部分 -->
+			<div class="about-middle">
+				<div class="am-middle"><img src="images/bb3.jpg"/></div>
+				<div class="am-left">
+					<div class="title">A WORD<br/> ABOUT US</div>
+					<!-- 遮罩层 -->
+					<div class="content-layer"></div>
+					<div class="content">						
+						<div class="word">Praesent dignissim viverra est, sed<br/> bibendum ligula congue non.sed ac nisl<br/>et felis gravida commodo? Suspendisse<br/> eget ullamcorper ipsum. Suspendisse<br/> diam amet.</div>
+						<button>EXPLORE</button>
+					</div>
+				</div>
+				<div class="am-right">
+					<div class="total">
+						<div class="title">70000</div>
+						<hr width="40px" hight="2px" color="#07cbc9" />
+						<div class="desc">Students</div>
+					</div>
+					<div class="total">
+						<div class="title">600</div>
+						<hr width="40px" hight="2px" color="#07cbc9" />
+						<div class="desc">Faculty</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- About 底部 -->
+			<div class="about-bottom">
+				<div class="commen"><img src="images/b1.jpg"></div>
+				<div class="commen textarea">
+					<div class="title">Library</div>
+					<div class="desc1">Lorem Ipsum is simply dummy text of the<br/> printing and typesetting industry</div>
+					<div class="desc2">Lorem Ipsum has been the industry's standard dummy<br/> text ever since the 1500s, when an unknown printer took<br/> a galley of type and scrambled it to make a type<br/> specimen book.</div>
+					<button>EXPLORE</button>
+
+				</div>
+				<div class="commen"><img src="images/b2.jpg"></div>
+
+				<div class="commen textarea">
+					<div class="title">Computer Lab</div>
+					<div class="desc1">Lorem Ipsum is simply dummy text of the<br/> printing and typesetting industry</div>
+					<div class="desc2">Lorem Ipsum has been the industry's standard dummy<br/> text ever since the 1500s, when an unknown printer took<br/> a galley of type and scrambled it to make a type<br/> specimen book.</div>
+					<button>EXPLORE</button>
+				</div>				
+				<div class="commen textarea">
+					<div class="title">Conference Hall</div>
+					<div class="desc1">Lorem Ipsum is simply dummy text of the<br/> printing and typesetting industry</div>
+					<div class="desc2">Lorem Ipsum has been the industry's standard dummy<br/> text ever since the 1500s, when an unknown printer took<br/> a galley of type and scrambled it to make a type<br/> specimen book.</div>
+					<button>EXPLORE</button>
+				</div>
+				<div class="commen"><img src="images/b3.jpg"></div>
+				<div class="commen textarea">
+					<div class="title">Play Ground</div>
+					<div class="desc1">Lorem Ipsum is simply dummy text of the<br/> printing and typesetting industry</div>
+					<div class="desc2">Lorem Ipsum has been the industry's standard dummy<br/> text ever since the 1500s, when an unknown printer took<br/> a galley of type and scrambled it to make a type<br/> specimen book.</div>
+					<button>EXPLORE</button>
+				</div>
+				<div class="commen"><img src="images/b4.jpg"></div>
+				<!-- 每个文字部分的区块指向图片的箭头 -->
+				<div class="arrow arrow-lt"></div>
+				<div class="arrow arrow-rt"></div>
+				<div class="arrow arrow-lb"></div>
+				<div class="arrow arrow-rb"></div>
+			</div>
+		</div>
+		<!-- GALLERY区 -->
+		<div class="gallery">
+			<div class="gallery-top">				
+				<div class="title">GALLERY</div>
+				<hr width="40px" hight="2px" color="#07cbc9" />
+				<div class="word">
+					Lorem Ipsum is simply dummy text of the printing and typesetting<br/> 
+					industry. Lorem Ipsum has been the industry's standard dummy text<br/> 
+					ever since the 1500s.
+				</div>
+			</div>
+			<div class="gallery-bottom">
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-01.jpg"/></dt>
+						<dd>SCIENCE LAB</dd>
+					</dl>
+				</div>
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-02.jpg"/></dt>
+						<dd>INDOOR STADIUM</dd>
+					</dl>
+				</div>
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-03.jpg"/></dt>
+						<dd>TRANSPORTATION</dd>
+					</dl>
+				</div>
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-04.jpg"/></dt>
+						<dd>KIDS ROOM</dd>
+					</dl>
+				</div>
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-05.jpg"/></dt>
+						<dd>MEADITATION CLASSES</dd>
+					</dl>
+				</div>
+				<div class="commen">
+					<dl>
+						<dt><img src="images/03-06.jpg"/></dt>
+						<dd>KIDS PLAY GROUND</dd>
+					</dl>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<!-- 页脚区 -->
+	<div class="footer">
+		&copy; 2016 imooc.com 京ICP备13046642号
+	</div>
+</body>
+</html>

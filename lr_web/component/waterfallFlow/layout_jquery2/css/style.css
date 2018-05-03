@@ -1,0 +1,63 @@
+/* All Tag */
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+body {
+	background: #ddd;
+}
+img {
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: #444;
+}
+a:hover{
+	color: #999;
+}
+
+/* wrap */
+#wrap {
+	/* 盒子使用绝对定位，容器就必须是相对定位 */
+	position: relative;
+	/* 把定位改为，相对、绝对或者固定，它的宽度和高度就会默认变为0 */
+	/* width: auto; 让宽度根据内容的宽度的变化而变化，
+	容器的宽度是由浏览器的宽度或者显示器分辨率的宽度能够放多少列来决定的，容器宽度等于列数乘以盒子的宽度*/
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+
+#wrap > div {
+	float: left;
+	
+	/*box-sizing 默认值是content-box, 如果值为 border-box，表示 width=左右内边距+内容宽度 */
+	/* box-sizing: border-box; 之前，盒子实际宽度 = 10 + 10 + 280 + 10 + 10 = 320 */
+	/* box-sizing: border-box; 之后，盒子实际宽度 = 10 + 280 + 10 =300; 内容宽度 = 280 - 10 - 10 = 260 */
+	/*box-sizing: border-box; */
+	width: 280px;
+	height: auto;
+	margin: 10px;
+	
+	border-radius: 5px;
+	background: #fff;
+	/*position: absolute;*/
+
+}
+
+#wrap > div > a {
+	box-sizing: border-box;
+	width: 100%;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	padding: 10px;
+}
+
+#wrap > div > a > img{
+	width: 100%;
+}

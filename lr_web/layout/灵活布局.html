@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> 圣杯布局灵活应用</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		body{min-width: 700px;background: #fff;font-size: 14px;}
+		.header,.footer{
+			padding: 20px 3px;
+			background: #ccc;
+			text-align: center;
+			margin: 10px;
+		}
+		.bd-lft,.bd-rgt,.bd-3-lr,.bd-3-ll,.bd-3-rr{
+			margin: 10px 10px;
+			min-width: 400px;
+		}
+		.main{
+			color: #fff;
+			background: rgb(19,150,241);
+		}
+		.aside,.aside-1,.aside-2{
+			color: #fff;
+			background: rgb(20,175,202);
+		}
+		p{
+			margin: 0;
+			padding: 20px;
+			text-align: center;
+		}
+		/* 左侧边栏固定，右侧自适应 */
+		.bd-lft{
+			zoom:1;
+			overflow: hidden;
+			padding-left: 210px;
+			
+		}
+		.bd-lft .aside{
+			float: left;
+			width: 200px;
+			margin-left: -100%;
+			
+
+			position:relative;
+			left: -210px;/* = -parantNode.paddingLeft */
+			_left:0; /*IE6 hack*/
+
+		}
+		.bd-lft .main {
+			float: left;
+			width: 100%;
+		}
+		
+		/* 右侧边栏固定，左侧自适应 */
+		.bd-rgt{
+			zoom:1;
+			overflow: hidden;
+			padding-right: 210px;
+		}
+		.bd-rgt .main{
+			float: left;
+			width: 100%;
+		}
+		.bd-rgt .aside{
+			float: left;
+			width:200px;
+			margin-left: -200px;/* = -this.width */
+
+			position: relative;
+			right: -210px;/* = -parantNode.paddingRight */
+		}
+
+		/* 左中右 中间栏自适应 */
+		.bd-3-lr {
+			zoom:1;
+			overflow: hidden;
+			padding-left: 210px;
+			padding-right: 210px;
+		}
+		.bd-3-lr .main{
+			float: left;
+			width: 100%;
+		}
+		.bd-3-lr .aside-1{
+			float:left;
+			width: 200px;
+			margin-left: -100%;
+
+			position: relative;
+			left: -210px;
+			-left: 210px; /* IE6 hack */
+		}
+
+		.bd-3-lr .aside-2 {
+			float: left;
+			width: 200px;
+			margin-left: -200px;
+
+			position: relative;
+			right: -210px;
+		}
+
+		/* 都在左边，右侧自适应 */
+		.bd-3-ll {
+			zoom:1;
+			overflow: hidden;
+			padding-left: 420px;
+		}
+		.bd-3-ll .main{
+			float: left;
+			width: 100%;
+		}
+		.bd-3-ll .aside-1{
+			float: left;
+			width: 200px;
+			margin-left: -100%;
+			position: relative;
+			left: -420px;
+		}
+		.bd-3-ll .aside-2{
+			float: left;
+			width: 200px;
+			margin-left: -100%;
+			position: relative;
+			left: -210px;
+		}
+
+		/* 都在右边，左侧自适应 */
+		.bd-3-rr {
+			overflow: hidden;
+			zoom:1;
+			padding-right: 420px;
+		}
+		.bd-3-rr .main{
+			width: 100%;
+			float: left;
+		}
+		.bd-3-rr .aside-1{
+			float: left;
+			width: 200px;
+			margin-left: -200px;
+
+			position: relative;
+			right: -210px;
+		}
+		.bd-3-rr .aside-2{
+			float: left;
+			width: 200px;
+			margin-left: -200px;
+
+			position: relative;
+			right: -420px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h4>头部</h4>
+	</div>
+	<!-- 左侧边栏固定，右侧自适应 -->
+	<div class="bd-lft">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside">
+			<p>侧边栏固定宽度</p>
+		</div>
+	</div>
+	<!-- 右侧边栏固定，左侧自适应 -->
+	<div class="bd-rgt">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside">
+			<p>侧边栏固定宽度</p>
+		</div>
+	</div>
+	<!-- 左右两边固定，中间自适应 -->
+	<div class="bd-3-lr">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside-1">
+			<p>侧边栏1固定宽度</p>
+		</div>
+		<div class="aside-2">
+			<p>侧边栏2固定宽度</p>
+		</div>
+	</div>
+
+<!-- 	<div class="bd-3-lr">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside-1">
+			<p>侧边栏1固定宽度</p>
+		</div>
+		<div class="aside-2">
+			<p>侧边栏2固定宽度</p>
+		</div>
+	</div> -->
+
+		<div class="bd-3-ll">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside-1">
+			<p>侧边栏1固定宽度</p>
+		</div>
+		<div class="aside-2">
+			<p>侧边栏2固定宽度</p>
+		</div>
+	</div>
+
+		<div class="bd-3-rr">
+		<div class="main">
+			<p>主内容栏自适应宽度</p>
+		</div>
+		<div class="aside-1">
+			<p>侧边栏1固定宽度</p>
+		</div>
+		<div class="aside-2">
+			<p>侧边栏2固定宽度</p>
+		</div>
+	</div>
+
+	<div class="footer">
+		<h4>底部</h4>
+	</div>
+</body>
+</html>
